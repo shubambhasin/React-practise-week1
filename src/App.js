@@ -1,13 +1,34 @@
+import { useState } from "react";
 import CharCount from "./CharCount";
 import Counter from "./Counter";
 import Passwordmatch from "./PasswordMatch";
+import RenderList from "./RenderList";
 import ShowPassword from "./ShowPassword";
 import "./styles.css";
 import SubmitDisabled from "./SubmitDisabled";
+import Todo from "./Todo";
+
 
 export default function App() {
+
+  const [viewMode, setViewMode] = useState("light")
+  
+  const toggleMode = () => {
+
+    if(viewMode ==="light")
+    {
+      setViewMode("dark")
+    }
+    else
+    {
+      setViewMode("light")
+    }
+  }
+
   return (
-    <div className="App" style={{}}>
+    <div className={`App ${viewMode}`}>
+
+      <button className="view-toggle" onClick={toggleMode}>Right now: {viewMode.toUpperCase()} Mode</button> 
       <Counter />
       <br />
       {/* <Card
@@ -27,7 +48,10 @@ export default function App() {
 <SubmitDisabled/>
 {/* **********showPassword******************** */}
 <ShowPassword/>
-
+{/* ************RenderList******************** */}
+<RenderList/>
+{/* *************TODO*********** */}
+<Todo/>
 
     </div>
   );

@@ -1,6 +1,43 @@
 .App {
-  font-family: sans-serif;
- 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dark
+{
+
+  background: rgb(49, 49, 49);
+  color: rgb(231, 231, 231);
+  transition: 0.3s ease-in;
+
+}
+.dark > button ,textarea, input, button
+{
+  background: rgb(49, 49, 49);
+  color: rgb(231, 231, 231);
+
+  transition: 0.3s ease-in;
+}
+.light
+{
+  background: rgb(231, 231, 231);
+  color: rgb(49, 49, 49);
+  
+  transition: 0.3s ease-in;
+}
+.light textarea, input, button
+{
+  background: rgb(231, 231, 231);
+  color: rgb(49, 49, 49);
+}
+
+
+.view-toggle
+{
+
+padding: 0.5rem 1rem;
+font-size: large;
+margin: 1rem;
+
 }
 .tweet-container
 {
@@ -36,4 +73,13 @@ width: 450px;
 {
   
   margin: 0.5rem;
+}
+
+.todo
+{
+
+  padding: 1rem;
+  border: 1px solid black;
+  
+  
 }

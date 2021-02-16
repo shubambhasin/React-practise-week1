@@ -41,13 +41,18 @@ const Passwordmatch = () => {
     
 
   };
+
+function checklength(e){
+  e.preventDefault()
+ console.log((e.target.value).length)
+}
   return (
     <div>
       <div className="password-container"  style={{width: "250px"}}>
         <span style={{ marginLeft: "0.5rem" }}>Password Match test </span>
         <form onSubmit={checkMatch}>
           <input type="password" placeholder="Enter password" onChange={handleInput1} />
-
+          <input type="password"onChange={checklength}/>
           <input type="password" placeholder="Repeat Password" onChange={handleInput2} />
           <br />
           <button type="submit">Check</button>
